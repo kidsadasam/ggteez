@@ -1,0 +1,55 @@
+/*=================================*/
+/* Nivo Slider Demo
+/* November 2010
+/* By: Gilbert Pellegrom
+/* http://dev7studios.com
+/*=================================*/
+
+/*====================*/
+/*=== Reset Styles ===*/
+/*====================*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-weight:inherit;
+	font-style:inherit;
+	font-size:100%;
+	font-family:inherit;
+	vertical-align:baseline;
+}
+body {
+	line-height:1;
+	color:black;
+	background:transparent;
+}
+
+
+
+
+.theme-default #slider {
+
+    width:733px; 
+    height:290px; 
+}
+
+
+.theme-default .nivo-controlNav a {
+	display:block;
+	width:20px;
+	height:20px;
+	background:url(themes/default/bullets.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+	margin-top:260px;
+	float:left;
+}
+

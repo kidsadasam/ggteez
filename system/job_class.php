@@ -1,0 +1,73 @@
+<?
+// Class 1
+$_CONFIG['job']['class_ro'][0] = 'Novice';
+$_CONFIG['job']['class_ro'][1] = 'Swordman';
+$_CONFIG['job']['class_ro'][2] = 'Mage';
+$_CONFIG['job']['class_ro'][3] = 'Archer';
+$_CONFIG['job']['class_ro'][4] = 'Acolyte';
+$_CONFIG['job']['class_ro'][5] = 'Merchant';
+$_CONFIG['job']['class_ro'][6] = 'Thief';
+// Class 2
+$_CONFIG['job']['class_ro'][7] = 'Knight';
+$_CONFIG['job']['class_ro'][8] = 'Priest';
+$_CONFIG['job']['class_ro'][9] = 'Wizard';
+$_CONFIG['job']['class_ro'][10] = 'Blacksmith';
+$_CONFIG['job']['class_ro'][11] = 'Hunter';
+$_CONFIG['job']['class_ro'][12] = 'Assassin';
+$_CONFIG['job']['class_ro'][14] = 'Crusader';
+$_CONFIG['job']['class_ro'][15] = 'Monk';
+$_CONFIG['job']['class_ro'][16] = 'Sage';
+$_CONFIG['job']['class_ro'][17] = 'Rogue';
+$_CONFIG['job']['class_ro'][18] = 'Alchemist';
+$_CONFIG['job']['class_ro'][19] = 'Bard';
+$_CONFIG['job']['class_ro'][20] = 'Dancer';
+$_CONFIG['job']['class_ro'][23] = 'Super Novice';
+// Hi Class
+$_CONFIG['job']['class_ro'][4001] = 'High Novice';
+$_CONFIG['job']['class_ro'][4002] = 'High Swordman';
+$_CONFIG['job']['class_ro'][4003] = 'High Mage';
+$_CONFIG['job']['class_ro'][4004] = 'High Archer';
+$_CONFIG['job']['class_ro'][4005] = 'High Acolyte';
+$_CONFIG['job']['class_ro'][4006] = 'High Merchant';
+$_CONFIG['job']['class_ro'][4007] = 'High Thief';
+$_CONFIG['job']['class_ro'][4008] = 'Lord Knight';
+$_CONFIG['job']['class_ro'][4009] = 'High Priest';
+$_CONFIG['job']['class_ro'][4010] = 'High Wizard';
+$_CONFIG['job']['class_ro'][4011] = 'Whitesmith';
+$_CONFIG['job']['class_ro'][4012] = 'Sniper';
+$_CONFIG['job']['class_ro'][4013] = 'Assassin Cross';
+$_CONFIG['job']['class_ro'][4015] = 'Paladin';
+$_CONFIG['job']['class_ro'][4016] = 'Champion';
+$_CONFIG['job']['class_ro'][4017] = 'Professor';
+$_CONFIG['job']['class_ro'][4018] = 'Stalker';
+$_CONFIG['job']['class_ro'][4019] = 'Creator';
+$_CONFIG['job']['class_ro'][4020] = 'Clown';
+$_CONFIG['job']['class_ro'][4021] = 'Gypsy';
+$_CONFIG['job']['class_ro'][4046] = 'Taekwon';
+$_CONFIG['job']['class_ro'][4047] = 'Star Gladiator';
+$_CONFIG['job']['class_ro'][4049] = 'Soul Linker';
+$_CONFIG['job']['class_ro'][24] = 'Gunslinger';
+$_CONFIG['job']['class_ro'][25] = 'Ninja';
+// Baby Class
+$_CONFIG['job']['class_ro'][4023] = 'Baby Novice';
+$_CONFIG['job']['class_ro'][4024] = 'Baby Swordman';
+$_CONFIG['job']['class_ro'][4025] = 'Baby Mage';
+$_CONFIG['job']['class_ro'][4026] = 'Baby Archer';
+$_CONFIG['job']['class_ro'][4027] = 'Baby Acolyte';
+$_CONFIG['job']['class_ro'][4028] = 'Baby Merchant';
+$_CONFIG['job']['class_ro'][4029] = 'Baby Thief';
+$_CONFIG['job']['class_ro'][4030] = 'Baby Knight';
+$_CONFIG['job']['class_ro'][4031] = 'Baby Priest';
+$_CONFIG['job']['class_ro'][4032] = 'Baby Wizard';
+$_CONFIG['job']['class_ro'][4033] = 'Baby Blacksmith';
+$_CONFIG['job']['class_ro'][4034] = 'Baby Hunter';
+$_CONFIG['job']['class_ro'][4035] = 'Baby Assassin';
+$_CONFIG['job']['class_ro'][4037] = 'Baby Crusader';
+$_CONFIG['job']['class_ro'][4038] = 'Baby Monk';
+$_CONFIG['job']['class_ro'][4039] = 'Baby Sage';
+$_CONFIG['job']['class_ro'][4040] = 'Baby Rogue';
+$_CONFIG['job']['class_ro'][4041] = 'Baby Alchemist';
+$_CONFIG['job']['class_ro'][4042] = 'Baby Bard';
+$_CONFIG['job']['class_ro'][4043] = 'Baby Dancer';
+$_CONFIG['job']['class_ro'][4045] = 'Baby Super Novice';
+?>
