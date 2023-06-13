@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+img  								{
+	border: 0px;
+	text-align: center;
+}
+body{
+	background-image: url(../images/ets/Untitled-1.png);
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-position: center top;
+	margin: 0px;
+	text-align: center;
+	color: #FFF;

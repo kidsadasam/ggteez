@@ -1,0 +1,26 @@
+@charset "utf-8";
+body {
+	background-attachment: fixed;
+	background-image: url(../img/news_bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin: 0px;
+}
+#news {
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	height: 20px;
+	width: 470px;
+}
+.date {
+	color: #F00;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration:underline
+}
+.news {
+	color: #000;
+	font-size: 14px;
+	text-decoration:underline
+}
