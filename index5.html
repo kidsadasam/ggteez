@@ -1,0 +1,698 @@
+
+<!DOCTYPE html>
+<head>
+    <link rel="shortcut icon" href="imag/124422875_182443806806202_1255235885707626217_n.ico" type="image/x-icon">
+    <title>- เก็บของ Shop -</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="images/rolvup.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <script src="js/exp_calc.js"></script>
+	<script>
+	var Arr_LV = {
+    "1": 0, "2": 9, "3": 16, "4": 25, "5": 36, "6": 77, "7": 112, "8": 153, "9": 200, "10": 253,
+    "11": 320, "12": 385, "13": 490, "14": 585, "15": 700, "16": 830, "17": 970, "18": 1120, "19": 1260, "20": 1420,
+    "21": 1620, "22": 1860, "23": 1990, "24": 2240, "25": 2504, "26": 2950, "27": 3426, "28": 3934, "29": 4474, "30": 6889,
+    "31": 7995, "32": 9174, "33": 10425, "34": 11748, "35": 13967, "36": 15775, "37": 17678, "38": 19677, "39": 21773, "40": 30543,
+    "41": 34212, "42": 38065, "43": 42102, "44": 46323, "45": 53026, "46": 58419, "47": 64041, "48": 69892, "49": 75973, "50": 102468,
+    "51": 115254, "52": 128692, "53": 142784, "54": 157528, "55": 178184, "56": 196300, "57": 215198, "58": 234879, "59": 255341, "60": 330188,
+    "61": 365914, "62": 403224, "63": 442116, "64": 482590, "65": 536948, "66": 585191, "67": 635278, "68": 687211, "69": 740988, "70": 925400,
+    "71": 1473746, "72": 1594058, "73": 1718928, "74": 1848355, "75": 1982340, "76": 2230113, "77": 2386162, "78": 2547417, "79": 2713878, "80": 3206160,
+    "81": 3681024, "82": 4022472, "83": 4377024, "84": 4744680, "85": 5125440, "86": 5767272, "87": 6204000, "88": 6655464, "89": 7121664, "90": 7602600,
+    "91": 9738720, "92": 11649960, "93": 13643520, "94": 18339300, "95": 23836800, "96": 35658000, "97": 48687000, "98": 58135000, "99": 99999998, "100": 4000000
+};
+
+var Arr_LVHI = {
+    "1": 0, "2": 15, "3": 27, "4": 42, "5": 60, "6": 128, "7": 185, "8": 252, "9": 330, "10": 417,
+    "11": 600, "12": 722, "13": 920, "14": 1097, "15": 1313, "16": 1557, "17": 1820, "18": 2100, "19": 2363, "20": 2663,
+    "21": 3402, "22": 3906, "23": 4179, "24": 4704, "25": 5259, "26":6195 , "27":7194, "28":8262, "29":9396, "30":14468,
+    "31":18588, "32":21330, "33":24239, "34":27314, "35":32474, "36":36677, "37":41102, "38":45749, "39":50622, "40":71013,
+    "41":87240, "42":97067, "43":107360, "44":118124, "45":135216, "46":148968, "47":163305, "48":178224, "49":193731, "50":261294,
+    "51":319830, "52":357120, "53":396225, "54":437141, "55":494460, "56":544733, "57":597174, "58":651789, "59":708572, "60":916272,
+    "61":1097742, "62":1209672, "63":1326348, "64":1447770, "65":1610844, "66":1755573, "67":1905834, "68":2061633, "69":2222964, "70":2776200,
+    "71":5084424, "72":5499500, "73":5930301, "74":6376826, "75":6839073, "76":7693890, "77":8232260, "78":8788589, "79":9362879, "80":11061252,
+    "81":14355993, "82":15687641, "83":17070393, "84":18504252, "85":19989216, "86":22492361, "87":24195600, "88":25956309, "89":27774489, "90":29650140,
+    "91":43824240, "92":52424820, "93":61395840, "94":82526850, "95":107265600, "96":160461000, "97":219091500, "98":261607500, "99":999999999, "100":999999999
+
+};
+
+var Arr_JobHI = {
+    "99": 6800000, "100": 1272747, "101": 1354980, "102": 1442526, "103": 1535729, "104": 1634954, "105": 1740590, "106": 1853051, "107": 1972778, "108": 2100241,
+    "109": 2235940, "110": 2800454, "111": 2981395, "112": 3174026, "113": 3379103, "114": 3597431, "115": 3829865, "116": 4077317, "117": 4340757, "118": 4621218,
+    "119": 4919800, "120": 6161918, "121": 6560046, "122": 6983898, "123": 7435136, "124": 7915529, "125": 8426961, "126": 8971437, "127": 9551092, "128": 10168199,
+    "129": 10825178, "130": 13558246, "131": 14434260, "132": 15366875, "133": 16359747, "134": 17416770, "135": 18542089, "136": 19740116, "137": 21015549, "138": 22373389,
+    "139": 23818961, "140": 29832611, "141": 31760132, "142": 33812193, "143": 35996840, "144": 38322640, "145": 40798713, "146": 43434768, "147": 46241142, "148": 49228839,
+    "149": 52409575, "150": 65641590, "151": 69882774, "152": 74397986, "153": 79204932, "154": 84322460, "155": 89770638, "156": 95570830, "157": 101745779, "158": 108319699,
+    "159": 115318369, "160": 122769231, "161": 130701503, "162": 139146289, "163": 148136703, "164": 157707999, "165": 167897708, "166": 178745787, "167": 190294773, "168": 202589954,
+    "169": 215679542, "170": 229614864, "171": 244450565, "172": 260244819, "173": 277059559, "174": 294960720, "175": 397136365, "176": 511284053, "177": 663459658, "178": 859711825,
+	"179": 1114296769, "180": 1444206411, "181": 1871807409, "182": 2426009129, "183": 3144298810, "184": 4075258593, "185": 5281855746
+  
+};
+		$(document).ready(function(){
+    			// $("div#carouselExampleIndicators").hide();
+                $.get("src/count.php?_="+new Date().getTime(),function(number){
+                    $("div#counter").html("Counter: "+parseFloat(number).toLocaleString('en')); //.padStart(7,'0')
+                });
+                // $("#HiClassError").hide();
+    // var btnCal = $("button#btnCal");
+    var txtStartLV = $("input#txtStartLV");
+    var txtStartPercent = $("input#txtStartPercent");
+    var txtEndLV = $("input#txtEndLV");
+    // var txtExpTotal = $("input#txtExpTotal");
+    var txtPrice = $("input#txtPrice");
+    // var txtMoney = $("input#txtMoney");
+    // var txtPercentExp = $("input#txtPercentExp");
+
+    var txtStartHILV = $("input#txtStartHILV");
+    var txtStartHIPercent = $("input#txtStartHIPercent");
+    var txtEndHILV = $("input#txtEndHILV");
+    // var txtExpHITotal = $("input#txtExpHITotal");
+    var txtHIPrice = $("input#txtHIPrice");
+    // var txtHIMoney = $("input#txtHIMoney");
+
+    var txtStartHIJob = $("input#txtStartHIJob");
+    var txtStartHIJobPercent = $("input#txtStartHIJobPercent");
+    var txtEndHIJob = $("input#txtEndHIJob");
+    // var txtExpHIJobTotal = $("input#txtExpHIJobTotal");
+    var txtHIJobPrice = $("input#txtHIJobPrice");
+    // var txtHIJobMoney = $("input#txtHIJobMoney");
+
+    txtStartLV.keyup(function () {
+        // console.log("test");
+        Cal_LV();
+    })
+
+    txtEndLV.keyup(function () {
+        Cal_LV();
+    })
+
+    txtPrice.keyup(function () {
+        Cal_LV();
+    })
+
+    txtStartPercent.keyup(function () {
+        Cal_LV();
+    })
+
+    txtStartHILV.keyup(function () {
+        CalHI_LV();
+    })
+
+    txtEndHILV.keyup(function () {
+        CalHI_LV();
+    })
+
+    txtHIPrice.keyup(function () {
+        CalHI_LV();
+    })
+
+    txtStartHIPercent.keyup(function () {
+        CalHI_LV();
+    })
+
+    txtStartHIJob.keyup(function () {
+        JobHI_LV();
+    })
+
+    txtStartHIJobPercent.keyup(function () {
+        JobHI_LV();
+    })
+
+    txtEndHIJob.keyup(function () {
+        JobHI_LV();
+    })
+
+    txtHIJobPrice.keyup(function () {
+        JobHI_LV();
+    })
+		});
+		function Cal_LV() {
+    var txtStartLV = $("input#txtStartLV");
+    var txtStartPercent = $("input#txtStartPercent");
+    var txtEndLV = $("input#txtEndLV");
+    var txtExpTotal = $("input#txtExpTotal");
+    var txtPrice = $("input#txtPrice");
+    var txtMoney = $("input#txtMoney");
+    var txtPercentExp = $("input#txtPercentExp");
+
+    var CAL = 0;
+
+    var LV_Min = $("input#txtStartLV").val();
+    var LV_Max = $("input#txtEndLV").val();
+    // var Price = $("input#txtPrice").val();
+    if(LV_Min != "" && LV_Max != "")
+    {
+        if(LV_Max > 99 || LV_Min >= 99)
+        {
+            $("#NormalClassError").html("เธเธฃเธญเธเธเนเธญเธกเธนเธฅเนเธกเนเธ–เธนเธเธ•เนเธญเธ");
+            $("#NormalClassError").show();
+			$("#NormalClassError").css("background-color","red");
+			$("#NormalClassError").css("color","white");
+            setTimeout(function() { $("#NormalClassError").hide(); }, 3000);
+            txtMoney.val("Error!!");
+            txtExpTotal.val("Error!!");
+            return;
+        }
+        if(LV_Min >= LV_Max)
+        {
+            $("#NormalClassError").html("เน€เธฅเน€เธงเธฅเธเธฑเธเธเธธเธเธฑเธเธ•เนเธญเธเธเนเธญเธขเธเธงเนเธฒเน€เธฅเน€เธงเธฅเธ—เธตเนเธ•เนเธญเธเธเธฒเธฃ");
+            $("#NormalClassError").show();
+			$("#NormalClassError").css("background-color","red");
+			$("#NormalClassError").css("color","white");
+            setTimeout(function() { $("#NormalClassError").hide(); }, 3000);
+            txtMoney.val("Error!!");
+            txtExpTotal.val("Error!!");
+            return;
+        }
+        else
+        {
+            $("#NormalClassError").hide();
+        }
+    }
+    //Percent
+    var MaxLvExp = parseInt(LV_Max);
+    var MinLvExp = parseInt(LV_Min);
+    // console.log("MaxLvExp="+MaxLvExp);
+    // console.log("MinLvExp="+MinLvExp);
+    if(MaxLvExp-MinLvExp == 1)
+    {
+        var StartLvExp = Arr_LV[parseInt(LV_Max)];
+        // console.log("StartLvExp="+StartLvExp);
+    }
+    else if(MaxLvExp-MinLvExp > 1)
+    {
+        var StartLvExp = Arr_LV[parseInt(LV_Min)+1];
+        // console.log("StartLvExp="+StartLvExp);
+    }
+    var IsExp = StartLvExp * ($("input#txtStartPercent").val() / 100);
+    // console.log("IsExp="+IsExp);
+
+    if (MinLvExp && MaxLvExp) {
+
+        for (var i = MinLvExp; i <= MaxLvExp ; i++) {
+            //var nValue = parseFloat(Arr_LV[i + 1]) + parseFloat(Arr_LV[i]);
+            if (i != MinLvExp) {
+                var nValue = parseFloat(Arr_LV[i]);
+                // console.log("nValue="+nValue);
+                CAL = CAL + nValue;
+            }
+        }
+
+        
+        //CAL = parseFloat(10000000);
+        var EXP_ = numberWithCommas(CAL - IsExp)
+        // console.log("EXP_="+EXP_);
+        txtExpTotal.val(EXP_);
+
+        var nPreice = txtPrice.val() != "" ? parseFloat(txtPrice.val()) : 0;
+        var TotalExp = CAL - IsExp;
+        var nMonney = (TotalExp / 1000000) * nPreice;
+
+        txtMoney.val(numberWithCommas(nMonney.toFixed(2)));
+    }
+
+
+}
+
+function CalHI_LV() {
+    var txtStartHILV = $("input#txtStartHILV");
+    var txtStartHIPercent = $("input#txtStartHIPercent");
+    var txtEndHILV = $("input#txtEndHILV");
+    var txtExpHITotal = $("input#txtExpHITotal");
+    var txtHIPrice = $("input#txtHIPrice");
+    var txtHIMoney = $("input#txtHIMoney");
+
+    var CAL = 0;
+    
+    var LV_Min = txtStartHILV.val();
+    var LV_Max = txtEndHILV.val();
+    if(LV_Min != "" && LV_Max != "")
+    {
+        if(LV_Max > 99 || LV_Min >= 99)
+        {
+            $("#BaseHiClassError").html("เธเธฃเธญเธเธเนเธญเธกเธนเธฅเนเธกเนเธ–เธนเธเธ•เนเธญเธ");
+            $("#BaseHiClassError").show();
+			$("#BaseHiClassError").css("background-color","red");
+			$("#BaseHiClassError").css("color","white");
+            setTimeout(function() { $("#BaseHiClassError").hide(); }, 3000);
+            txtHIMoney.val("Error!!");
+            txtExpHITotal.val("Error!!");
+            return;
+        }
+        if(LV_Min >= LV_Max)
+        {
+            $("#BaseHiClassError").html("เน€เธฅเน€เธงเธฅเธเธฑเธเธเธธเธเธฑเธเธ•เนเธญเธเธเนเธญเธขเธเธงเนเธฒเน€เธฅเน€เธงเธฅเธ—เธตเนเธ•เนเธญเธเธเธฒเธฃ");
+            $("#BaseHiClassError").show();
+			$("#BaseHiClassError").css("background-color","red");
+			$("#BaseHiClassError").css("color","white");
+            setTimeout(function() { $("#BaseHiClassError").hide(); }, 3000);
+            txtHIMoney.val("Error!!");
+            txtExpHITotal.val("Error!!");
+            return;
+        }
+        else
+        {
+            $("#BaseHiClassError").hide();
+        }
+    }
+    //Percent
+    var MaxLvExp = parseInt(LV_Max);
+
+    var MinLvExp = parseInt(LV_Min);
+    if(MaxLvExp-MinLvExp == 1)
+    {
+        var StartLvExp = Arr_LVHI[parseInt(LV_Max)];
+        // console.log("StartLvExp="+StartLvExp);
+    }
+    else if(MaxLvExp-MinLvExp > 1)
+    {
+        var StartLvExp = Arr_LVHI[parseInt(LV_Min)+1];
+        // console.log("StartLvExp="+StartLvExp);
+    }
+    var IsExp = StartLvExp * (txtStartHIPercent.val() / 100);
+    // console.log("IsExp="+IsExp);
+
+    if (MinLvExp && MaxLvExp) {
+
+        for (var i = MinLvExp; i <= MaxLvExp ; i++) {
+            if (i != MinLvExp) {
+                var nValue = parseFloat(Arr_LVHI[i]);
+                // console.log("nValue="+nValue);
+                CAL = CAL + nValue;
+            }
+        }
+
+        var EXP_ = numberWithCommas(CAL - IsExp);
+        // console.log("EXP_="+EXP_);
+        txtExpHITotal.val(EXP_);
+
+        var nPreice = txtHIPrice.val() != "" ? parseFloat(txtHIPrice.val()) : 0;
+        var TotalExp = CAL - IsExp;
+        var nMonney = (TotalExp / 1000000) * nPreice;
+
+        txtHIMoney.val(numberWithCommas(nMonney.toFixed(2)));
+    }
+
+
+}
+
+function JobHI_LV() {
+    var txtStartHIJob = $("input#txtStartHIJob");
+    var txtStartHIJobPercent = $("input#txtStartHIJobPercent");
+    var txtEndHIJob = $("input#txtEndHIJob");
+    var txtExpHIJobTotal = $("input#txtExpHIJobTotal");
+    var txtHIJobPrice = $("input#txtHIJobPrice");
+    var txtHIJobMoney = $("input#txtHIJobMoney");
+
+    var CAL = 0;
+    
+    var LV_Min = txtStartHIJob.val();
+    var LV_Max = txtEndHIJob.val();
+    if(LV_Min != "99" && LV_Max != "99")
+    {
+        if(LV_Max > 185 || LV_Min >= 185)
+        {
+            $("#JobHiClassError").html("เธเธฃเธญเธเธเนเธญเธกเธนเธฅเนเธกเนเธ–เธนเธเธ•เนเธญเธ้");
+            $("#JobHiClassError").show();
+			$("#JobHiClassError").css("background-color","red");
+			$("#JobHiClassError").css("color","white");
+            setTimeout(function() { $("#HiClassError").hide(); }, 3000);
+            txtHIJobMoney.val("Error!!");
+            txtExpHIJobTotal.val("Error!!");
+            return;
+        }
+        if(LV_Min >= LV_Max)
+        {
+            $("#JobHiClassError").html("เน€เธฅเน€เธงเธฅเธเธฑเธเธเธธเธเธฑเธเธ•เนเธญเธเธเนเธญเธขเธเธงเนเธฒเน€เธฅเน€เธงเธฅเธ—เธตเนเธ•เนเธญเธเธเธฒเธฃ");
+            $("#JobHiClassError").show();
+			$("#JobHiClassError").css("background-color","red");
+			$("#JobHiClassError").css("color","white");
+            setTimeout(function() { $("#HiClassError").hide(); }, 3000);
+            txtHIJobMoney.val("Error!!");
+            txtExpHIJobTotal.val("Error!!");
+            return;
+        }
+        else
+        {
+            $("#JobHiClassError").hide();
+        }
+    }
+    
+    //Percent
+    var MaxLvExp = parseInt(LV_Max);
+    var MinLvExp = parseInt(LV_Min);
+
+    // var StartLvExp = Arr_JobHI[parseInt(LV_Max)];
+    // var IsExp = StartLvExp * (txtStartHIJobPercent.val() / 100)
+    if(MaxLvExp-MinLvExp == 1)
+    {
+        var StartLvExp = Arr_JobHI[parseInt(LV_Max)];
+        // console.log("StartLvExp="+StartLvExp);
+    }
+    else if(MaxLvExp-MinLvExp > 1)
+    {
+        var StartLvExp = Arr_JobHI[parseInt(LV_Min)+1];
+        // console.log("StartLvExp="+StartLvExp);
+    }
+    var IsExp = StartLvExp * (txtStartHIJobPercent.val() / 100);
+    // console.log("IsExp="+IsExp);
+    
+
+    if (MinLvExp && MaxLvExp) {
+
+        for (var i = MinLvExp; i <= MaxLvExp ; i++) {
+            if (i != MinLvExp) {
+                var nValue = parseFloat(Arr_JobHI[i]);
+                // console.log("nValue="+nValue);
+                CAL = CAL + nValue;
+            }
+        }
+        
+        var EXP_ = numberWithCommas(CAL - IsExp);
+        // console.log("EXP_="+EXP_);
+        txtExpHIJobTotal.val(EXP_);
+        
+        var nPreice = txtHIJobPrice.val() != "" ? parseFloat(txtHIJobPrice.val()) : 0;
+        var TotalExp = CAL - IsExp;
+        var nMonney = (TotalExp / 1000000) * nPreice;
+
+        txtHIJobMoney.val(numberWithCommas(nMonney.toFixed(2)));
+    }
+
+
+
+}
+
+function numberWithCommas(number) {
+    var parts = number.toString().split(".");
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return parts.join(".");
+}
+    </script>
+    <style>
+        body{
+	font-size: 12px;
+	background-image: url();
+        }
+        div#right-banner {
+            display:inline-block;
+        }
+        div#left-banner {
+            display:inline-block;
+        }
+        div#counter{
+            font-size: 16px;
+            font-weight: bold;
+        }
+        @media (max-width: 425px) { /* hide for mobile phone vertical */
+            div#right-banner {
+                display:none;
+            }
+            div#left-banner {
+                display:none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div >
+            <!-- left sidebar -->
+            <div class="col-sm-3 fixed pl-3 py-3" style="display:none;">
+                <p><img src="images/boss.gif" alt="" width="90%"></p>
+                <p><img src="images/kong-ads.png" alt="" width="90%"></p>
+                <!-- <img src="images/kosana2.png" alt="" width="90%"> -->
+            </div>
+            <!-- center content -->
+            <div class="col fluid bg-faded py-3">
+              <div align="center">
+                    <div class="col-7" style="display:none;">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100" src="images/1.jpeg" alt="First slide" height="50%">
+                                    <!-- <div class="carousel-caption d-none d-md-block">
+                                        <h5>Number 1</h5>
+                                        <p>Content</p>
+                                    </div> -->
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="images/pic2.png" alt="Second slide">
+                                    <!-- <div class="carousel-caption d-none d-md-block">
+                                        <h5>Number 2</h5>
+                                        <p>Content</p>
+                                    </div> -->
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="images/pic3.png" alt="Third slide">
+                                    <!-- <div class="carousel-caption d-none d-md-block">
+                                        <h5>Number 3</h5>
+                                        <p>Content</p>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <p></p>
+                <h3 class="text-center"></h3>
+                <!-- <div class="form-group row">
+                </div> -->
+                <div class="form-group row">
+                    <div class="col-12">
+                        <div class="card border-info">
+                            <div class="card-header bg-info text-white">
+                                <center><b>Normal Classsic GGT</b></center>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group row">
+                                    <div class="col-md-10">
+                                        <div class="form-group row">
+                                            <label class="col-form-label col-3 text-right">เลเวลปัจจุบัน</label>
+                                            <div class="col-4"><input type="number" min="1" max="99" id="txtStartLV" class="form-control form-control-sm" placeholder=""></div>
+                                            <div class="col-3"><input type="number" min="1" max="100" id="txtStartPercent" class="form-control form-control-sm" placeholder=""></div>
+                                            
+                                            <label class="col-form-label ">%</label>
+                                            <!-- <label class="col-form-label col-1">%</label> -->
+                                        </div>
+                                        <!--<div class="form-group row">
+                                            <div class="col-2 text-right">
+                                                <label class="col-form-label ">จำนวน EXP ตามเวลปัจจุบัน</label>
+                                            </div>
+                                            <div class="col-5">
+                                                <input type="text" id="txtPercentExp" class="form-control" placeholder="" readonly="readonly">
+                                            </div>
+                                        </div>-->
+                                        <div class="form-group row">
+                                            <!-- <div class="col-3 text-right"> -->
+                                                <label class="col-form-label col-3 text-right">เลเวลที่ต้องการ</label>
+                                            <!-- </div> -->
+                                            <div class="col-4">
+                                                <input type="number" id="txtEndLV" class="form-control form-control-sm" placeholder="">
+                                            </div>
+        
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-3 text-right">
+                                                <label class="col-form-label ">EXP</label>
+                                            </div>
+                                            <div class="col-8">
+                                                <input type="text" id="txtExpTotal" class="form-control form-control-sm" placeholder="" readonly>
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="form-group row">
+                                            <div class="col-3 text-right">
+                                                <label class="col-form-label ">ล้านละ</label>
+                                            </div>
+                                            <div class="col-5">
+                                                <input type="number" max="100" min="1" id="txtPrice" class="form-control form-control-sm" placeholder="">
+                                            </div>
+                                            <div class="col-3">
+                                                <label class="col-form-label ">บาท</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <div class="col-3 text-right">
+                                                <label class="col-form-label ">ราคา</label>
+                                            </div>
+                                          <div class="col-8">
+                                                <input type="text" id="txtMoney" class="form-control form-control-sm" placeholder="" readonly>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div id="NormalClassError" class=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="form-group row">
+                    <div class="col-12">
+                        <div class="card border-success">
+                            <div class="card-header bg-success text-white"><b><center>High Class GGT (รออัฟเดท)</div></b></center>
+                            <div class="card-body">
+                                <!-- <div class="card border-secondary">
+                                    <div class="card-header bg-secondary text-white">
+                                        เลเวล (Base Lv.)
+                                    </div>
+                                    <div class="card-body">
+                                        
+                                    </div>
+                                </div> -->
+                                
+                                <div class="form-group row">
+                                    <div class="col-md-10">
+                                        <div class="form-group row">
+                                            <label class="col-form-label col-3 text-right">เลเวลปัจจุบัน</label>
+                                            <div class="col-4"><input type="number" max="99" min="1" id="txtStartHILV" class="form-control form-control-sm" placeholder=""></div>
+                                            <div class="col-3"><input type="number" max="100" min="1" id="txtStartHIPercent" class="form-control form-control-sm" placeholder=""></div>
+                                            
+                                            <label class="col-form-label ">%</label>
+                                            <!-- <label class="col-form-label col-1">%</label> -->
+                                        </div>
+                                        <div class="form-group row">
+                                            <!-- <div class="col-3 text-right"> -->
+                                                <label class="col-form-label col-3 text-right">เลเวลที่ต้องการ</label>
+                                            <!-- </div> -->
+                                            <div class="col-4">
+                                                <input type="number" min="1" max="99" id="txtEndHILV" class="form-control form-control-sm" placeholder="">
+                                            </div>
+        
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-3 text-right">
+                                                <label class="col-form-label ">EXP</label>
+                                            </div>
+                                            <div class="col-8">
+                                                <input type="text" id="txtExpHITotal" class="form-control form-control-sm" placeholder="" readonly>
+
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="form-group row">
+                                            <div class="col-3 text-right">
+                                                <label class="col-form-label ">ล้านละ</label>
+                                            </div>
+                                            <div class="col-5">
+                                                <input type="number" id="txtHIPrice" class="form-control form-control-sm" placeholder="">
+                                            </div>
+                                            <div class="col-3">
+                                                <label class="col-form-label ">บาท</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-3 text-right">
+                                                <label class="col-form-label ">ราคา</label>
+                                            </div>
+                                            <div class="col-8">
+                                                <input type="text" id="txtHIMoney" class="form-control form-control-sm" placeholder="" readonly>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div id="BaseHiClassError" class=""></div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group row">
+                    <div class="col-12">
+                        <div class="card border-danger">
+                            <div class="card-header bg-danger text-white"><center><b>Class 3 GGT</div></b></center>
+                            <div class="card-body">
+                             
+                              
+                                <div class="form-group row">
+                                    <div class="col-md-10">
+                                        <div class="form-group row">
+                                            <label class="col-form-label col-3 text-right">เลเวลปัจจุบัน</label>
+                                            <div class="col-4"><input type="number" min="99" max="175" id="txtStartHIJob" class="form-control form-control-sm" placeholder=""></div>
+                                            <div class="col-3"><input type="number" min="1" max="100" id="txtStartHIJobPercent" class="form-control form-control-sm" placeholder=""></div>
+                                            
+                                            <label class="col-form-label ">%</label>
+                                            <!-- <label class="col-form-label col-1">%</label> -->
+                                        </div>
+                                        <div class="form-group row">
+                                            <!-- <div class="col-3 text-right"> -->
+                                                <label class="col-form-label col-3 text-right">เลเวลที่ต้องการ</label>
+                                            <!-- </div> -->
+                                            <div class="col-4">
+                                                <input type="number" id="txtEndHIJob" class="form-control form-control-sm" placeholder="">
+                                            </div>
+        
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-3 text-right">
+                                                <label class="col-form-label ">EXP</label>
+                                            </div>
+                                            <div class="col-8">
+                                                <input type="text" id="txtExpHIJobTotal" class="form-control form-control-sm" placeholder="" readonly>
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="form-group row">
+                                            <div class="col-3 text-right">
+                                                <label class="col-form-label ">ล้านละ</label>
+                                            </div>
+                                            <div class="col-5">
+                                                <input type="number" id="txtHIJobPrice" class="form-control form-control-sm" placeholder="">
+                                            </div>
+                                            <div class="col-3">
+                                                <label class="col-form-label ">บาท</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-3 text-right">
+                                                <label class="col-form-label ">ราคา</label>
+                                            </div>
+                                            <div class="col-8">
+                                                <input type="text" id="txtHIJobMoney" class="form-control form-control-sm" placeholder="" readonly>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div id="JobHiClassError" class=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      </div>    
+      <!-- right sidebar -->
+      <div class="col-sm-3 fixed py-3 text-right" id="right-banner">
+          <p>Designed <a href="https://www.facebook.com/gaming/StorageShopRO" target="_blank">เก็บ</a>/<a href="https://www.facebook.com/gaming/StorageShopRO" target="_blank">iWebsize</a>.</p>
+          <!-- <p><img src="images/kosana2.png" alt="" width="90%"></p> -->
+        </div>
+</div>
+<div id="counter"></div>
+    </div>
+																						</body>
+</html>
