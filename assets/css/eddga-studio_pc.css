@@ -1,0 +1,50 @@
+label {display: inline-block;max-width: 100%;margin-bottom: 10px;font-family: 'Prompt',sans-serif;font-weight:400;color:#000;letter-spacing: 0.5px;}
+label a {color:#3936ff}
+label a:hover {color:#ff2658;text-decoration: none;}
+label a:focus {color:#ff2658;text-decoration: none;outline: 0!important;}
+.form-control {display: block;width: 100%;height: 34px;padding: 6px 12px;font-size: 16px;line-height: 1.42857143;color: rgba(0, 0, 0, 0.87);background-color: #fff;background-image: none;border: 1px solid #eee;border-radius: 0px;-webkit-box-shadow: none;box-shadow: none;-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;}
+.form-control:focus {border-color: #8ccaff;outline: 0;-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 2px rgba(255, 255, 255, 0.6);box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 2px rgba(255, 255, 255, 0.6);}
+.input-lg {height: 46px;padding: 10px 45px;line-height: 1.3333333;border-radius: 6px;font-family: 'Prompt',sans-serif;font-weight:200; letter-spacing:0.5px}
+.input-lg2 {height: 46px;padding: 0px 16px;line-height: 1.3333333;border-radius: 6px;font-family: 'Prompt',sans-serif;font-weight: 200;color:rgba(191,191,191,.87);}
+.has-feedback label ~ .form-control-feedback {top: 31px;}
+.form-control::-moz-placeholder {color: rgba(191,191,191,.87);opacity: 1;}
+.form-control::-ms-input-placeholder {color: rgba(191,191,191,.87);}
+.form-control::-webkit-input-placeholder {color: rgba(191,191,191,.87);}
+.form-control-feedback {left: 0;color: rgba(191,191,191,.87);}
+.help-block {font-family:Tahoma;font-size:12px;display: block;margin-top: 10px;margin-bottom: -10px;color:#7caaff;}
+.checkbox2 label {font-weight: 300;margin-top:20px}
+.btn-lg, .btn-group-lg > .btn {padding: 10px 14px;font-size: 18px;line-height: 1.3333333;border-radius: 5px;}
+.btn-register {color: #fff;background-color: #21BA45;border-color: #21BA45;letter-spacing: 1px;-webkit-transition: .5s all;-moz-transition: .5s all;-ms-transition: .5s all;transition: .5s all;-o-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);-ms-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+-moz-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);-webkit-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);}
+.btn-register:hover {color: #fff;background-color: #16ab39;border-color: #16ab39;letter-spacing: 2px;-webkit-transition: .5s all;-moz-transition: .5s all;-ms-transition: .5s all;transition: .5s all;text-shadow: none;box-shadow: none;}
+.btn-register:focus, .btn-register.focus {color: #fff;background-color: #0ea432;border-color: #0ea432;outline: 0!important;}
+.btn-register:active, .btn-register.active {color: #fff;background-color: #198f35;border-color: #198f35;}
+.btn-close {color: #fff;background-color: #db2828;border-color: #db2828;letter-spacing: 1px;-webkit-transition: .5s all;-moz-transition: .5s all;-ms-transition: .5s all;transition: .5s all;-o-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);-ms-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);-moz-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);-webkit-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);}
+.btn-close:hover {color: #fff;background-color: #d01919;border-color: #d01919;letter-spacing: 2px;-webkit-transition: .5s all;-moz-transition: .5s all;-ms-transition: .5s all;transition: .5s all;text-shadow: none;box-shadow: none;}
+.btn-close:focus, .btn-close.focus {color: #fff;background-color: #ca1010;border-color: #ca1010;outline: 0!important;}
+.btn-close:active, .btn-close.active {color: #fff;background-color: #b21e1e;border-color: #b21e1e;}
+.btn:close, .btn.close {background-image: none;outline: 0;-webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .080);box-shadow: inset 0 3px 5px rgba(0, 0, 0, .080);}
+.form-group {margin-bottom: 30px;}
+select {-webkit-appearance: none;-moz-appearance: none;appearance: none;background: url("../../images/btn_down.png") white no-repeat 95.5% !important;background: url("../../images/btn_down.png") white no-repeat calc(100% - 10px) !important;}
+select::-ms-expand { display: none; }
+select > option {font-family:Tahoma;font-weight:500;font-size: 14px;color:#333;}
+.modal-body {padding: 15px 14px 15px;}
+.modal-lg {width: 900px;margin: 35px auto 0;}
+.modal-header {border-bottom: none;}
+.modal-title {font:18px'Kanit';margin: 0;line-height: 1.42857143;}
+.modal-header .close {margin-top: -10px;}
+.b {font-weight: bold;color: #ff5757;}
+.form-panel {border: 1px solid transparent;}
+.form-panel-title {margin-top: 0;margin-bottom: 0;font-size: 14px;color: #fff;}
+.form-panel-title a{color:#fff;font-weight: 400;letter-spacing: 2px;padding-left: 5px;-webkit-animation: 1s textled infinite linear;-moz-animation: 1s textled infinite linear;-o-animation: 1s textled infinite linear;-ms-animation: 1s textled infinite linear;animation: 1s textled infinite linear;}
+@keyframes textled {0% {padding-left: 5px;color:#555;}50% {padding-left: 10px;color:#ff0000;}100% {padding-left: 5px;color:#555;}}
+.form-panel-body {padding: 10px;background-color: #fff;font-size: 12px;font-weight: 400;letter-spacing: 0.5px;}
+.form-panel-heading {padding: 13px 15px;border-bottom: 1px solid transparent;border-top-left-radius:6px;border-top-right-radius:6px;border-bottom-left-radius:6px;border-bottom-right-radius:6px; }
+.form-panel-group {margin-bottom: 20px;}
+.form-panel-group .form-panel {margin-bottom: 0;border-radius: 6px;}
+.form-panel-group .form-panel + .form-panel {margin-top: 5px;}
+.form-panel-group .form-panel-heading {border-bottom: 0;}
+.form-panel-group .form-panel-heading + .form-panel-collapse > .form-panel-body {border-top: 1px solid #eee;border-bottom-left-radius:6px;border-bottom-right-radius:6px; }
+.form-panel-default {border-color: #eee;}
+.form-panel-default > .form-panel-heading {color: #333;background-color: #fff;border-color: #eee;}
+.input-group-addon {padding: 5px 15px;font-size: 14px;font-weight: 200;letter-spacing: 1px;line-height: 1;color: #43f5ff;text-align: center;background-color: #fff;border: 1px solid #eee;border-radius: 6px;}
